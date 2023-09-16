@@ -1,13 +1,13 @@
 package com.example.ada_locatecar.Utils;
 
-public enum Tipo {
+public enum TipoCarroEnum {
 
     PEQUENO(100.00),
     MEDIO(150.00),
     SUV(200.00);
 
     private final double valorLocacao;
-    Tipo(double i) {
+    TipoCarroEnum(double i) {
         this.valorLocacao = i;
     }
 

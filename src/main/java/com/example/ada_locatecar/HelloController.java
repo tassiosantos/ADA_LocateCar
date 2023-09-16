@@ -1,18 +1,25 @@
-package com.example.ada_locatecar.Controllers;
+package com.example.ada_locatecar;
 
+import com.example.ada_locatecar.Controllers.*;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.stage.Modality;
-import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class HelloController {
-//    ClienteController clienteController = new ClienteController();
+
+    AdicionarClienteController adicionarClienteController = new AdicionarClienteController();
+    ListarClienteController listarClienteController = new ListarClienteController();
+    AdicionarCarroController adicionarCarroController = new AdicionarCarroController();
+
+    ListarCarroController listarCarroController = new ListarCarroController();
+
+    AlugarController alugarController = new AlugarController();
+
+    DevolverController devolverController = new DevolverController();
 
 
     @FXML
@@ -21,16 +28,33 @@ public class HelloController {
     private Label welcomeText;
 
     @FXML
-    protected void onHelloButtonClick() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("src/main/resources/com/example/ada_locatecar/new-client.fxml"));
-        Stage clientStage = new Stage();
+    protected void newClient(ActionEvent event) throws IOException {
+        adicionarClienteController.adicionarClienteView(event);
+    }
 
-        Scene scene = new Scene(root);
-        clientStage.setTitle("Novo Cliente");
-        clientStage.initModality(Modality.APPLICATION_MODAL);
-        clientStage.initOwner(buttonNewClient.getScene().getWindow());
-        clientStage.setScene(scene);
-        clientStage.show();
 
+    @FXML
+    public void listClient(ActionEvent event) throws IOException {
+        listarClienteController.listarClienteView();
+    }
+    @FXML
+    public void newCar(ActionEvent event) throws SQLException, IOException, ClassNotFoundException {
+        adicionarCarroController.adicionarCarroView();
+    }
+
+    @FXML
+    public void listCar(ActionEvent event) throws IOException {
+        listarCarroController.listarCarrosView();
+    }
+
+
+    @FXML
+    public void rentCar(ActionEvent event) throws IOException {
+        alugarController.rentCarView();
+    }
+
+    @FXML
+    public void returnCar(ActionEvent event)throws IOException {
+        devolverController.returnCarView();
     }
 }

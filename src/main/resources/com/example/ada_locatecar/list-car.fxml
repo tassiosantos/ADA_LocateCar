@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.ada_locatecar.ListCar"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="438.0" prefWidth="617.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ada_locatecar.Controllers.ListarCarroController">
+   <children>
+      <Label layoutX="34.0" layoutY="85.0" text="Modelo" />
+      <TextField fx:id="modeloBusca" layoutX="85.0" layoutY="81.0" />
+      <Button fx:id="buscarCarrosButton" layoutX="434.0" layoutY="81.0" mnemonicParsing="false" onAction="#buscarCarrosFiltrados" text="Buscar" />
+      <Label layoutX="34.0" layoutY="50.0" text="Marca" />
+      <TextField fx:id="marcaBusca" layoutX="85.0" layoutY="46.0" />
+      <TableView fx:id="carroTable" layoutX="34.0" layoutY="151.0" prefHeight="252.0" prefWidth="553.0">
+         <columns>
+            <TableColumn fx:id="marca" prefWidth="75.0" text="Marca" />
+            <TableColumn fx:id="modelo" prefWidth="75.0" text="Modelo" />
+            <TableColumn fx:id="placa" prefWidth="75.0" text="Placa" />
+            <TableColumn fx:id="cor" prefWidth="75.0" text="Cor" />
+            <TableColumn fx:id="status" prefWidth="75.0" text="Status" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Button fx:id="cancelarCarro" layoutX="515.0" layoutY="81.0" mnemonicParsing="false" onAction="#cancelListCarro" text="Cancelar" textFill="RED" />
+      <Label layoutX="257.0" layoutY="14.0" text="BUSCA DE CARROS" />
+      <Button fx:id="atualizarCarro" disable="true" layoutX="34.0" layoutY="115.0" mnemonicParsing="false" onAction="#atualizarCarroView" text="Alterar Carro" />
+   </children>
 </AnchorPane>

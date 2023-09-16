@@ -1,8 +1,10 @@
 package com.example.ada_locatecar.Utils;
 
+import java.sql.SQLException;
+
 public interface ObjetoAtualizadoListener<T> {
 
-    void onClienteAtualizado(T objeto);
+    void onObjetoAtualizado(T objeto) throws SQLException;
 
 }
 

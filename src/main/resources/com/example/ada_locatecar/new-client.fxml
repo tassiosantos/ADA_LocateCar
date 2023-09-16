@@ -1,14 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.ada_locatecar.NewClient"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane prefHeight="290.0" prefWidth="491.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ada_locatecar.Controllers.AdicionarClienteController">
+   <children>
+      <Label layoutX="39.0" layoutY="28.0" text="DADOS DO CLIENTE" />
 
+      <Label layoutX="39.0" layoutY="75.0" prefHeight="17.0" prefWidth="43.0" text="Nome:" />
+      <TextField fx:id="nome" layoutX="113.0" layoutY="75.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="290.0" />
+
+      <Label layoutX="39.0" layoutY="112.0" text="Documento:" />
+      <TextField fx:id="documento" layoutX="113.0" layoutY="112.0" />
+
+      <Label layoutX="39.0" layoutY="149.0" text="Endereço:" />
+      <TextField fx:id="endereco" layoutX="113.0" layoutY="149.0" />
+
+      <Label layoutX="39.0" layoutY="186.0" text="Habilitação:" />
+      <TextField fx:id="habilitacao" layoutX="113.0" layoutY="186.0" />
+    <Button fx:id="adicionarNovoCliente" alignment="CENTER" layoutX="32.0" layoutY="240.0" minWidth="0.0" mnemonicParsing="false" onAction="#adicionarCliente" prefHeight="20.0" text="Adicionar" textAlignment="CENTER" textFill="#1e1ec6" />
+      <Button fx:id="cancelarNovoCliente" layoutX="126.0" layoutY="240.0" mnemonicParsing="false" onAction="#cancelNewClient" text="Cancelar" textFill="#d01919" />
+      <Label fx:id="nomeError" layoutX="412.0" layoutY="79.0" textFill="RED" />
+      <Label fx:id="tipoError" layoutX="400.0" layoutY="116.0" prefHeight="17.0" prefWidth="7.0" textFill="RED" />
+      <Label fx:id="enderecoError" layoutX="277.0" layoutY="153.0" textFill="RED" />
+      <Label fx:id="driverLicenceError" layoutX="277.0" layoutY="190.0" textFill="RED" />
+      <ChoiceBox fx:id="tipoDocumento" layoutX="316.0" layoutY="112.0" prefHeight="25.0" prefWidth="67.0" />
+      <Label fx:id="errors" layoutX="39.0" layoutY="211.0" textFill="RED" />
+      <Label fx:id="documentError" layoutX="277.0" layoutY="116.0" textFill="RED" />
+
+   </children>
 </AnchorPane>

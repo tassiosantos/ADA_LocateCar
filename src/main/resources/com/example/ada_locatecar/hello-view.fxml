@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.ada_locatecar.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<AnchorPane prefHeight="357.0" prefWidth="310.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ada_locatecar.HelloController">
+   <children>
+      <Button fx:id="newClientButton" layoutX="9.0" layoutY="50.0" onAction="#newClient" text="Adicionar Cliente" />
+      <Button fx:id="listClientButton" layoutX="9.0" layoutY="95.0" mnemonicParsing="false" onAction="#listClient" prefHeight="25.0" prefWidth="107.0" text="Listar Clientes" />
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+      <Button fx:id="newCarButton" layoutX="190.0" layoutY="50.0" mnemonicParsing="false" onAction="#newCar" prefHeight="25.0" prefWidth="107.0" text="Adicionar Carro" />
+      <Button fx:id="searchCarButton" layoutX="190.0" layoutY="95.0" mnemonicParsing="false" onAction="#listCar" prefHeight="25.0" prefWidth="107.0" text="Buscar Carro" />
+
+      <Button fx:id="rentCarButton" layoutX="9.0" layoutY="179.0" mnemonicParsing="false" onAction="#rentCar" prefHeight="25.0" prefWidth="107.0" text="Alugar Carro" />
+      <Button fx:id="returnCarButton" layoutX="190.0" layoutY="179.0" mnemonicParsing="false" onAction="#returnCar" prefHeight="25.0" prefWidth="107.0" text="Devolver Carro" />
+      <Label layoutX="135.0" layoutY="139.0" text="Aluguel" />
+      <Label layoutX="41.0" layoutY="21.0" text="Cliente" />
+      <Label layoutX="234.0" layoutY="21.0" text="Carro" />
+
+   </children>
+</AnchorPane>

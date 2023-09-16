@@ -1,14 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.ada_locatecar.NewCar"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane prefHeight="373.0" prefWidth="492.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ada_locatecar.Controllers.AdicionarCarroController">
+    <children>
+        <Label layoutX="39.0" layoutY="28.0" text="DADOS DO CARRO" />
 
+        <Label layoutX="39.0" layoutY="75.0" prefHeight="17.0" prefWidth="43.0" text="Marca:" />
+        <TextField fx:id="marca" layoutX="113.0" layoutY="75.0" prefHeight="25.0" prefWidth="290.0" />
+
+        <Label layoutX="39.0" layoutY="116.0" text="Modelo:" />
+
+        <Label layoutX="39.0" layoutY="207.0" text="Placa:" />
+        <TextField fx:id="placa" layoutX="114.0" layoutY="203.0" />
+
+        <Label layoutX="39.0" layoutY="254.0" text="Cor:" />
+        <TextField fx:id="cor" layoutX="114.0" layoutY="250.0" />
+        <Button fx:id="adicionarCarro" alignment="CENTER" layoutX="33.0" layoutY="315.0" minWidth="0.0" mnemonicParsing="false" onAction="#adicionarCarro" prefHeight="20.0" text="Adicionar" textAlignment="CENTER" textFill="#1e1ec6" />
+        <Button fx:id="cancelarCarro" cancelButton="true" layoutX="130.0" layoutY="315.0" mnemonicParsing="false" text="Cancelar" textFill="#d01919" />
+        <ChoiceBox fx:id="tipo" layoutX="115.0" layoutY="158.0" prefHeight="25.0" prefWidth="67.0" />
+      <Label fx:id="marcaError" layoutX="412.0" layoutY="79.0" textFill="RED" />
+      <Label fx:id="modeloError" layoutX="270.0" layoutY="116.0" prefHeight="17.0" prefWidth="13.0" textFill="RED" />
+      <Label fx:id="placaError" layoutX="270.0" layoutY="207.0" prefHeight="17.0" prefWidth="13.0" textFill="RED" />
+      <Label fx:id="corError" layoutX="272.0" layoutY="254.0" prefHeight="17.0" prefWidth="22.0" textFill="RED" />
+      <Label fx:id="errors" layoutX="113.0" layoutY="284.0" prefHeight="17.0" prefWidth="35.0" textFill="RED" />
+      <Label layoutX="37.0" layoutY="162.0" text="Tipo:" />
+      <TextField fx:id="modelo" layoutX="114.0" layoutY="112.0" />
+      <Label fx:id="tipoError" layoutX="192.0" layoutY="162.0" textFill="RED" />
+
+    </children>
 </AnchorPane>

@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.ada_locatecar.ListClient"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="622.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ada_locatecar.Controllers.ListarClienteController">
+    <children>
+        <Button fx:id="buscarClientesButton" layoutX="434.0" layoutY="81.0" mnemonicParsing="false" onAction="#buscarClientesFiltrados" text="Buscar" />
+        <Label layoutX="34.0" layoutY="50.0" text="Nome" />
+        <TextField fx:id="nomeBusca" layoutX="85.0" layoutY="46.0" />
+        <TableView fx:id="clientTable" layoutX="34.0" layoutY="123.0" onSort="#setClient" prefHeight="252.0" prefWidth="553.0">
+            <columns>
+                <TableColumn fx:id="id" editable="false" minWidth="2.0" prefWidth="48.0" text="ID" />
+                <TableColumn fx:id="nome" editable="false" prefWidth="121.0" text="Nome" />
+                <TableColumn fx:id="documento" editable="false" prefWidth="157.0" text="Documento" />
+                <TableColumn fx:id="habilitacao" editable="false" prefWidth="88.0" text="Habilitação" />
+            <TableColumn fx:id="endereco" editable="false" prefWidth="138.0" text="Endereço" />
+            </columns>
+        </TableView>
+        <Button fx:id="cancelarCliente" layoutX="515.0" layoutY="81.0" mnemonicParsing="false" onAction="#cancelListClient" text="Cancelar" textFill="RED" />
+      <Label layoutX="257.0" layoutY="14.0" text="BUSCA DE CLIENTES" />
+      <Button fx:id="atualizarCliente" disable="true" layoutX="34.0" layoutY="81.0" mnemonicParsing="false" onAction="#atualizarClienteView" text="Alterar Cliente" />
+    </children>
 </AnchorPane>
