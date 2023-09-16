@@ -73,12 +73,7 @@ public class ClienteRepository implements Repository<Pessoa, Long> {
     }
 
 
-    @Override
-    public void delete(Pessoa entity) {
-
-    }
-
-    @Override
+     @Override
     public Pessoa getById(Long id) throws SQLException, ClassNotFoundException {
         H2DataBase.connect();
         Pessoa pessoa = null;

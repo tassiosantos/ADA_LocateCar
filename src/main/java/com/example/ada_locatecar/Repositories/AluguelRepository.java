@@ -93,10 +93,6 @@ public class AluguelRepository implements Repository<Aluguel, Long> {
     }
 
 
-    @Override
-    public void delete(Aluguel entity) {
-
-    }
 
     @Override
     public Aluguel getById(Long id) throws SQLException, ClassNotFoundException {

@@ -21,6 +21,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.util.StringConverter;
+import org.h2.table.Table;
 
 import java.io.IOException;
 import java.net.URL;
@@ -138,7 +139,7 @@ public class AlugarController implements Initializable {
     public void rentCar(ActionEvent event)  throws SQLException, ClassNotFoundException {
         Aluguel aluguel;
         boolean hasError = false;
-        if(!(cliente == null)&&!(carro == null)) {
+
             if ("".equalsIgnoreCase(localAluguel.getText())) {
                 localAluguelError.setText("*");
                 hasError = true;
@@ -151,17 +152,27 @@ public class AlugarController implements Initializable {
             } else {
                 localDevolucaoError.setText("");
             }
-            if ("".equalsIgnoreCase(cliente.getNome())) {
+            if (cliente != null) {
+                if ("".equalsIgnoreCase(cliente.getNome())) {
+                    clienteError.setText("*");
+                    hasError = true;
+                } else {
+                    clienteError.setText("");
+                }
+            }else {
                 clienteError.setText("*");
                 hasError = true;
-            } else {
-                clienteError.setText("");
             }
-            if ("".equalsIgnoreCase(carro.getMarca())) {
+            if(carro != null) {
+                if ("".equalsIgnoreCase(carro.getMarca())) {
+                    carroError.setText("*");
+                    hasError = true;
+                } else {
+                    carroError.setText("");
+                }
+            }else{
                 carroError.setText("*");
                 hasError = true;
-            } else {
-                carroError.setText("");
             }
             if (dataAluguel.getValue() == null) {
                 dataAluguelError.setText("*");
@@ -181,7 +192,8 @@ public class AlugarController implements Initializable {
             } else {
                 minutosError.setText("");
             }
-        }
+
+
 
 
         if(hasError){
@@ -224,10 +236,21 @@ public class AlugarController implements Initializable {
         }
     }
 
-    public void filtrarCarro(ActionEvent event) {
+    public void filtrarCarro(ActionEvent event) throws SQLException {
+        if(!("".equalsIgnoreCase(marcaCarro.getText()))){
+            carTable.setItems(FXCollections.observableList(buscarCarrosFiltrados()));
+        }else {
+            carTable.setItems(buscarCarros());
+        }
     }
 
-    public void filtrarCliente(ActionEvent event) {
+    public void filtrarCliente(ActionEvent event) throws SQLException, ClassNotFoundException {
+        if(!("".equalsIgnoreCase(nomeCliente.getText()))){
+            clientTable.setItems(FXCollections.observableList(buscarPessoasFiltradas()));
+        }
+        else{
+            clientTable.setItems(buscarClientes());
+        }
     }
 
     public void setCarro() {
@@ -287,9 +310,12 @@ public class AlugarController implements Initializable {
         return FXCollections.observableList(clientes);
     }
 
-    public void atualizarTabelas(){
-        carTable.refresh();
-        clientTable.refresh();
+    public List<Carro> buscarCarrosFiltrados() throws SQLException {
+            return this.carroService.findByMarca(marcaCarro.getText());
+    }
+
+    public List<Pessoa> buscarPessoasFiltradas() throws SQLException, ClassNotFoundException {
+        return this.clienteService.findByName(nomeCliente.getText());
     }
 
     public void cancelarAlugarButton(ActionEvent event) {

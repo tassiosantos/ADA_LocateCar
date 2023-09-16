@@ -77,11 +77,6 @@ public class CarroRepository implements Repository<Carro, Long> {
 
 
     @Override
-    public void delete(Carro entity) {
-
-    }
-
-    @Override
     public Carro getById(Long id) throws SQLException, ClassNotFoundException {
         H2DataBase.connect();
         Carro carro = null;

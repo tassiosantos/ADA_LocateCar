@@ -12,6 +12,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -21,10 +22,13 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.ResourceBundle;
 
 public class DevolverController implements Initializable {
+    @FXML
+    private DatePicker returnDate;
     @FXML
     private TableView<Aluguel> carrosAlugados;
     @FXML
@@ -48,6 +52,8 @@ public class DevolverController implements Initializable {
     @FXML
     private Button cancelarButton;
 
+
+    Aluguel aluguel;
     List<Aluguel> alugueis;
     AluguelService aluguelService = new AluguelService();
 
@@ -61,10 +67,6 @@ public class DevolverController implements Initializable {
 
 
 
-
-
-
-
         clientStage.setTitle("Alugar Carro");
         clientStage.initModality(Modality.APPLICATION_MODAL);
         clientStage.setScene(scene);
@@ -73,7 +75,23 @@ public class DevolverController implements Initializable {
     }
 
 
-    public void devolverCarro(ActionEvent event) {
+    public void devolverCarro(ActionEvent event) throws SQLException, ClassNotFoundException {
+        System.out.println(returnDate.getValue());
+        if(returnDate.getValue() == null){
+            if(aluguel.getDataHoraDevolucao() == null) {
+                LocalDateTime data = LocalDateTime.now();
+                aluguel.setDataHoraDevolucao(data);
+                this.aluguelService.DevolverCarro(aluguel);
+                returnDate.setValue(data.toLocalDate());
+                atualizarTabela();
+            }
+        }else {
+            if(aluguel.getDataHoraDevolucao() == null) {
+                aluguel.setDataHoraDevolucao(returnDate.getValue().atStartOfDay());
+                this.aluguelService.DevolverCarro(aluguel);
+                atualizarTabela();
+            }
+        }
 
     }
 
@@ -113,12 +131,17 @@ public class DevolverController implements Initializable {
     public void setAluguel() {
         carrosAlugados.setOnMouseClicked(event -> {
             if (event.getClickCount() == 1) {
-                Aluguel aluguel = carrosAlugados.getSelectionModel().getSelectedItem();
+                aluguel = carrosAlugados.getSelectionModel().getSelectedItem();
                 if (aluguel != null) {
                     devolverCarroButton.setDisable(false);
                 }
             }
         });
+    }
+
+
+    public void atualizarTabela() throws SQLException {
+        carrosAlugados.refresh();
     }
 
 

@@ -20,7 +20,7 @@
       <Label layoutX="294.0" layoutY="14.0" text="CARROS ALUGADOS" />
       <Button fx:id="devolverCarroButton" layoutX="424.0" layoutY="57.0" mnemonicParsing="false" onAction="#devolverCarro" text="Devolver" />
       <Button fx:id="cancelarButton" layoutX="528.0" layoutY="57.0" mnemonicParsing="false" onAction="#cancelar" text="Cancelar" textFill="RED" />
-      <DatePicker layoutX="136.0" layoutY="57.0" />
+      <DatePicker fx:id="returnDate" layoutX="136.0" layoutY="57.0" />
       <Label layoutX="18.0" layoutY="61.0" text="Data de devolução:" />
    </children>
 </AnchorPane>

@@ -4,49 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ffbcdb79-5f2a-48ef-948a-bc12873c58d0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Controllers/AlugarController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Controllers/DevolverController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Controllers/ListarCarroController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Services/AluguelService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/ada_locatecar/rent-car.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/ada_locatecar/return-car.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="ffbcdb79-5f2a-48ef-948a-bc12873c58d0" name="Changes" comment="Added features">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Controllers/AdicionarCarroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Controllers/AdicionarCarroController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Controllers/AdicionarClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Controllers/AdicionarClienteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Controllers/AtualizarCarroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Controllers/AtualizarCarroController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Controllers/AtualizarClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Controllers/AtualizarClienteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Controllers/ListarClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Controllers/ListarClienteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Entities/Abstracts/Carro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Entities/Abstracts/Carro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Entities/Abstracts/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Entities/Abstracts/Pessoa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Entities/Aluguel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Entities/Aluguel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Entities/CarroMedio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Entities/CarroMedio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Entities/CarroPequeno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Entities/CarroPequeno.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Entities/CarroSUV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Entities/CarroSUV.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Entities/ClienteCNPJ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Entities/ClienteCNPJ.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Entities/ClienteCPF.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Entities/ClienteCPF.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/H2DataBase/H2DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/H2DataBase/H2DataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/H2DataBase/InserirRegistroCarro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/H2DataBase/InserirRegistroCarro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Controllers/AlugarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Controllers/AlugarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Controllers/DevolverController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Controllers/DevolverController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Interfaces/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Interfaces/Repository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Repositories/AluguelRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Repositories/AluguelRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Repositories/CarroRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Repositories/CarroRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Repositories/ClienteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Repositories/ClienteRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Services/CarroService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Services/CarroService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Services/ClienteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Services/ClienteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Utils/ObjetoAtualizadoListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Utils/ObjetoAtualizadoListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Utils/TipoCarroEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ada_locatecar/Utils/TipoCarroEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ada_locatecar/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ada_locatecar/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ada_locatecar/list-car.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ada_locatecar/list-car.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ada_locatecar/list-client.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ada_locatecar/list-client.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ada_locatecar/new-car.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ada_locatecar/new-car.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ada_locatecar/new-client.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ada_locatecar/new-client.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ada_locatecar/update-car.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ada_locatecar/update-car.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ada_locatecar/update-client.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ada_locatecar/update-client.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ada_locatecar/return-car.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ada_locatecar/return-car.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +142,20 @@
       <option name="presentableId" value="Default" />
       <updated>1693761468348</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added features">
+      <option name="closed" value="true" />
+      <created>1694859186829</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1694859186829</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added features" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added features" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
